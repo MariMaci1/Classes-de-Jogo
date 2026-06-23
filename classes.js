@@ -3,8 +3,7 @@ let heroi ={
     idade:"389",
 }
 
-
-let classe = ("mago")
+let classe = ("guerreiro")
 
 class classesHeroi{
 
@@ -19,13 +18,18 @@ class classesHeroi{
 
 let guerreiro = new classesHeroi("Guerreiro", "Espada")
 let mago = new classesHeroi("Mago", "Magia")
-let monje = new classesHeroi("Monje", "Artes Marcias")
+let monge = new classesHeroi("Monge", "Artes Marcias")
 let ninja = new classesHeroi("Ninja", "Shuriken")
-
 
 console.log(heroi.nome, heroi.idade)
 
-guerreiro.atacar()
-mago.atacar()
-monje.atacar()
-ninja.atacar()
+let heroiFinal
+let resultadoRPG = classe
+switch (classe){
+    case "guerreiro": heroiFinal = guerreiro.atacar(); break;
+    case "mago": heroiFinal = mago.atacar(); break;
+    case "monge": heroiFinal = monge.atacar(); break;
+    case "ninja": heroiFinal = ninja.atacar(); break;
+    default: "Classe inválida!";
+}
+
